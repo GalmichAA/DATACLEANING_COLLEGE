@@ -14,7 +14,7 @@ import pandas as pd
 
 # Leemos el archivo de Excel y almacenamos la información
 # en un DataFrame llamado "docente".
-docente = pd.read_excel("tu_docente.xlsx")
+docente = pd.read_excel("DATASET_original.xlsx")
 
 
 # ------------------------------------------------------------
@@ -169,7 +169,7 @@ lista_unidos = lista_unidos.loc[~lista_unidos["separados"].isin(eliminar)]
 # Exporta los nombres y apellidos únicos a un archivo CSV que servirá
 # como referencia para detectar la incorporación de acentos faltantes, 
 # mediante un diccionario de correcciones.
-# lista_unidos.to_csv("lista_unicos.csv", index=False)
+lista_unidos.to_csv("lista_unicos.csv", index=False)
 
 
 
@@ -255,8 +255,8 @@ for columna in columnas:
 # ------------------------------------------------------------
 
 # Guardar el DataFrame ya normalizado en un nuevo archivo de Excel.
-# docente.to_excel("docente_normalizado.xlsx", index=False)
+docente.to_excel("docente_normalizado.xlsx", index=False)
 
 
 # Mostramos en pantalla el resultado final.
-#print(docente)
+print(docente)
